@@ -2,7 +2,7 @@ import React, { PropTypes } from "react"
 
 import PagePreview from "../PagePreview"
 
-import styles from "./index.css"
+import "./index.css"
 
 const PagesList = ({ pages }) => {
   return (
@@ -10,7 +10,7 @@ const PagesList = ({ pages }) => {
       {
       pages.length
       ? (
-        <ul className={ styles.list }>
+        <ul className="list">
           {
           pages.map((page) => (
             <li key={ page.title }><PagePreview { ...page } /></li>

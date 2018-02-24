@@ -5,25 +5,25 @@ import Svg from "react-svg-inline"
 import twitterSvg from "../icons/iconmonstr-twitter-1.svg"
 import gitHubSvg from "../icons/iconmonstr-github-1.svg"
 
-import styles from "./index.css"
+import "./index.css"
 
 const Header = (props, { metadata: { pkg } }) => (
-  <header className={ styles.header }>
-    <nav className={ styles.nav }>
-      <div className={ styles.navPart1 }>
+  <header className="header">
+    <nav className="nav">
+      <div className="navPart1">
         <Link
-          className={ styles.link }
+          className="link"
           to={ "/" }
         >
           { "Home" }
         </Link>
       </div>
-      <div className={ styles.navPart2 }>
+      <div className="navPart2">
         {
           pkg.twitter &&
           <a
             href={ `https://twitter.com/${pkg.twitter}` }
-            className={ styles.link }
+            className="link"
           >
             <Svg svg={ twitterSvg } cleanup />
             { "Twitter" }
@@ -33,7 +33,7 @@ const Header = (props, { metadata: { pkg } }) => (
           pkg.repository &&
           <a
             href={ pkg.repository }
-            className={ styles.link }
+            className="link"
           >
             <Svg svg={ gitHubSvg } cleanup />
             { "GitHub" }

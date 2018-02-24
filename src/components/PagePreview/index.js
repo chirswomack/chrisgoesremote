@@ -3,17 +3,17 @@ import { Link } from "phenomic"
 
 import Button from "../../components/Button"
 
-import styles from "./index.css"
+import "./index.css"
 
 const PagePreview = ({ __url, title, date, description }) => {
   const pageDate = date ? new Date(date) : null
 
   return (
-    <div className={ styles.wrapper }>
-      <Link to={ __url } className={ styles.title }>
+    <div className="wrapper">
+      <Link to={ __url } className="title">
         { title }
       </Link>
-      <div className={ styles.meta }>
+      <div className="meta">
         {
           pageDate &&
             <time key={ pageDate.toISOString() }>
@@ -21,11 +21,11 @@ const PagePreview = ({ __url, title, date, description }) => {
             </time>
         }
       </div>
-      <div className={ styles.description }>
+      <div className="description">
         { description }
         { " " }
       </div>
-      <Link to={ __url } className={ styles.readMore }>
+      <Link to={ __url } className="readMore">
         <Button secondary>{ "Read More →" }</Button>
       </Link>
     </div>

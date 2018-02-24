@@ -58,13 +58,14 @@ export default (config = {}) => {
           ],
         },
 
+        /* Normal CSS */
         {
           test: /\.css$/,
           loader: ExtractTextPlugin.extract({
             fallback: 'style-loader',
             use: [
               { loader: 'css-loader', options: { importLoaders: 1 } },
-              { loader: 'postcss-loader', query: { 'plugins': postcssPlugins } }
+              {loader: 'postcss-loader', options: { plugins: postcssPlugins}},
             ]
           }),
         },
@@ -144,8 +145,8 @@ export default (config = {}) => {
       }),
 
       new ExtractTextPlugin({
-        filename: "style.css",
-        disable: config.dev,
+        filename: "[name].css",
+        disable: config.dev
       }),
 
       ...config.production && [

@@ -2,7 +2,7 @@ import React from "react"
 import Helmet from "react-helmet"
 import TopBarProgressIndicator from "react-topbar-progress-indicator"
 
-import styles from "./index.css"
+import "./index.css"
 
 TopBarProgressIndicator.config({
   barColors: {
@@ -18,8 +18,8 @@ const Loading = () => (
       title={ "Loading..." }
     />
     <TopBarProgressIndicator />
-    <div className={ styles.loader }>
-      <div className={ styles.spinner } />
+    <div className="loader">
+      <div className="spinner" />
     </div>
   </div>
 )

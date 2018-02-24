@@ -1,7 +1,7 @@
 import React, { PropTypes } from "react"
 import cx from "classnames"
 
-import styles from "./index.css"
+import "./index.css"
 
 const Button = ({ className, secondary, light, big, ...otherProps }) => (
   <span
@@ -9,10 +9,10 @@ const Button = ({ className, secondary, light, big, ...otherProps }) => (
     { ...otherProps }
     className={ cx({
       [className]: className,
-      [styles.button]: true,
-      [styles.secondary]: secondary,
-      [styles.light]: light,
-      [styles.big]: big,
+      'button': true,
+      'secondary': secondary,
+      'light': light,
+      'big': big,
     }) }
   />
 )

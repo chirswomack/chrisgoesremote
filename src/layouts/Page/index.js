@@ -6,7 +6,7 @@ import { BodyContainer, joinUri, Link } from "phenomic"
 import Button from "../../components/Button"
 import Loading from "../../components/Loading"
 
-import styles from "./index.css"
+import "./index.css"
 
 const Page = (
   {
@@ -51,25 +51,25 @@ const Page = (
   ]
 
   return (
-    <div className={ styles.page }>
+    <div className="page">
       <Helmet
         title={ metaTitle }
         meta={ meta }
       />
       {
         <div
-          className={ styles.hero }
+          className="hero"
           style={ head.hero && {
             background: `#111 url(${ head.hero }) 50% 50% / cover`,
           } }
         >
-          <div className={ styles.header }>
-            <div className={ styles.wrapper }>
-              <h1 className={ styles.heading }>{ head.title }</h1>
+          <div className="page-header">
+            <div className="page-wrapper">
+              <h1 className="heading">{ head.title }</h1>
               {
                 head.cta &&
                 <Link to={ head.cta.link }>
-                  <Button className={ styles.cta } light { ...head.cta.props }>
+                  <Button className="cta" light { ...head.cta.props }>
                     { head.cta.label }
                   </Button>
                 </Link>
@@ -78,9 +78,9 @@ const Page = (
           </div>
         </div>
       }
-      <div className={ styles.wrapper + " " + styles.pageContent }>
+      <div className={"page-wrapper pageContent"}>
         { header }
-        <div className={ styles.body }>
+        <div className="body">
           {
             isLoading
             ? <Loading />
