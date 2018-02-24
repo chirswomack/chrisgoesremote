@@ -2,6 +2,7 @@ import path from "path"
 
 import webpack from "webpack"
 import ExtractTextPlugin from "extract-text-webpack-plugin"
+import CopyWebpackPlugin from "copy-webpack-plugin"
 import { phenomicLoader } from "phenomic"
 import PhenomicLoaderFeedWebpackPlugin
   from "phenomic/lib/loader-feed-webpack-plugin"
@@ -61,7 +62,7 @@ export default (config = {}) => {
         // by default *.css files are considered as CSS Modules
         // And *.global.css are considered as global (normal) CSS
 
-        // *.css => CSS Modules
+        //*.css => CSS Modules
         {
           test: /\.css$/,
           exclude: /\.global\.css$/,
@@ -108,30 +109,31 @@ export default (config = {}) => {
             ],
           }),
         },
+
         // ! \\
         // If you want global CSS only, just remove the 2 sections above
         // and use the following one
         // ! \\ If you want global CSS for node_modules only, just uncomment
         // this section and the `include` part
-        /*
-        {
-          test: /\.css$/,
-          // depending on your need, you might need to scope node_modules
-          // for global CSS if you want to keep CSS Modules by default
-          // for your own CSS. If so, uncomment the line below
-          // include: path.resolve(__dirname, "node_modules"),
-          loader: ExtractTextPlugin.extract({
-            fallback: "style-loader",
-            use: [
-              "css-loader",
-              {
-                loader: "postcss-loader",
-                query: { "plugins": postcssPlugins },
-              },
-            ]
-          }),
-        },
-        */
+        
+        // {
+        //   test: /\.css$/,
+        //   // depending on your need, you might need to scope node_modules
+        //   // for global CSS if you want to keep CSS Modules by default
+        //   // for your own CSS. If so, uncomment the line below
+        //   // include: path.resolve(__dirname, "node_modules"),
+        //   loader: ExtractTextPlugin.extract({
+        //     fallback: "style-loader",
+        //     use: [
+        //       "css-loader",
+        //       {
+        //         loader: "postcss-loader",
+        //         query: { "plugins": postcssPlugins },
+        //       },
+        //     ]
+        //   }),
+        // },
+        
         // ! \\ if you want to use Sass or LESS, you can add sass-loader or
         // less-loader after postcss-loader (or replacing it).
         // ! \\ You will also need to adjust the file extension
@@ -163,6 +165,9 @@ export default (config = {}) => {
     },
 
     plugins: [
+      new CopyWebpackPlugin([
+        {from: 'admin', to: 'admin'},
+      ]),
       // You should be able to remove the block below when the following
       // issue has been correctly handled (and postcss-loader supports
       // "plugins" option directly in query, see postcss-loader usage above)

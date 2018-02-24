@@ -1,6 +1,4 @@
 import React, { PropTypes } from "react"
-
-import LatestPosts from "../../components/LatestPosts"
 import Page from "../Page"
 
 import styles from "./index.css"
@@ -17,16 +15,15 @@ const Post = (props) => {
           <header className={ styles.header }>
             {
               pageDate &&
-              <time key={ pageDate.toISOString() }>
-                { pageDate.toDateString() }
+              <time key={ pageDate.toLocaleDateString() }>
+                { pageDate.toLocaleDateString() }
               </time>
             }
           </header>
         </div>
       }
     >
-      <hr />
-      <LatestPosts />
+      
     </Page>
   )
 }

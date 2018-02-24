@@ -4,13 +4,12 @@ import warning from "warning"
 import { BodyContainer, joinUri, Link } from "phenomic"
 
 import Button from "../../components/Button"
-import Loading from "../../components/Loading"
+
 
 import styles from "./index.css"
 
 const Page = (
   {
-    isLoading,
     __filename,
     __url,
     head,
@@ -81,11 +80,10 @@ const Page = (
       <div className={ styles.wrapper + " " + styles.pageContent }>
         { header }
         <div className={ styles.body }>
-          {
-            isLoading
-            ? <Loading />
-            : <BodyContainer>{ body }</BodyContainer>
-          }
+          
+            
+            <BodyContainer>{ body }</BodyContainer>
+          
         </div>
         { children }
         { footer }
@@ -96,7 +94,6 @@ const Page = (
 
 Page.propTypes = {
   children: PropTypes.node,
-  isLoading: PropTypes.bool,
   __filename: PropTypes.string,
   __url: PropTypes.string,
   head: PropTypes.object.isRequired,
