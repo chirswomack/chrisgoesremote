@@ -15,6 +15,20 @@ const Footer = () => (
           {  `<${ process.env.PHENOMIC_NAME} />` }
         </span>
       </a>
+      <span className={ styles.phenomicReferenceName }>
+        <a
+          href={ `/admin` }
+          className={ styles.phenomicReference }>
+        Login to CMS
+        </a>
+      </span>
+      <span className={ styles.phenomicReferenceName }>
+        <a
+          href={ `https://www.mdwp.de` }
+          className={ styles.phenomicReference }>
+        Netlify-CMS integration by mdwp
+        </a>
+      </span>
     </p>
   </footer>
 )

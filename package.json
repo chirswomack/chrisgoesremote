@@ -14,7 +14,9 @@
     "test": "npm run build"
   },
   "phenomic": {
-    "CNAME": false
+    "CNAME": false,
+    "source": "content",
+    "assets": "assets"
   },
   "#babel": "webpack-(development|production) are useful for webpack 2, otherwise use development|production",
   "babel": {
@@ -98,7 +100,9 @@
     "babel-preset-react-optimize": "^1.0.1",
     "babel-preset-stage-2": "^6.22.0",
     "caniuse-db": "^1.0.30000652",
+    "caniuse-lite": "^1.0.30000697",
     "classnames": "^2.2.5",
+    "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.0",
     "eslint": "^3.7.1",
     "eslint-loader": "^1.7.1",
@@ -108,11 +112,11 @@
     "history": "^2.0.0",
     "npm-run-all": "^1.7.0",
     "phenomic": "^0.21.2",
-    "postcss": "^6.0.19",
-    "postcss-browser-reporter": "^0.4.0",
-    "postcss-cssnext": "^2.4.0",
-    "postcss-loader": "^1.3.3",
-    "postcss-reporter": "^1.3.0",
+    "postcss": "^6.0.9",
+    "postcss-browser-reporter": "^0.5.0",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-loader": "^2.1.0",
+    "postcss-reporter": "^5.0.0",
     "raw-loader": "^0.5.1",
     "react": "^15.0.0",
     "react-dom": "^15.0.0",

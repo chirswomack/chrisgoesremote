@@ -1,4 +1,5 @@
 /* Using global sytles is not recommended, prefer local styles via CSS Modules */
+@tailwind preflight;
 
 /*
  * box model like it should be
@@ -54,6 +55,16 @@ body {
 :root {
   --phenomic-HeadingAnchor-width: 1.4rem;
   --phenomic-HeadingAnchor-margin: 0.4rem;
+  --maxWidth: 60rem;
+  --colorPrimaryDark: #107491;
+  --colorPrimary: #007acc;
+  --colorSecondaryDark: #22846C;
+  --colorSecondary: #46BE77;
+  --colorNeutralDark: #111;
+  --colorNeutralLight: #FBFCFC;
+  --colorText: #555;
+  --colorSecondary: config('colors.secondary');
+  --colorNeutral: #8C8D91;
 }
 
 .phenomic-HeadingAnchor {
@@ -85,7 +96,9 @@ a {
 hr {
   border: 0;
   height: 1px;
-  background: var(--colorNeutral);
+  background: config('colors.neutral');
   opacity: 0.2;
   margin: 2rem 0;
 }
+
+@tailwind utilities;
