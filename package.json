@@ -1,137 +1,47 @@
 {
-  "private": true,
-  "name": "chrisgoesremote",
-  "homepage": "https://www.chrisgoesremote.com",
-  "twitter": "",
-  "repository": "https://github.com/chirswomack/chrisgoesremote.git",
+  "name": "gatsby-starter-netlify-cms",
+  "description": "Example Gatsby, and Netlify CMS project",
+  "version": "1.1.3",
+  "author": "Austin Green",
+  "dependencies": {
+    "bulma": "^0.7.0",
+    "gatsby": "^2.0.0",
+    "gatsby-plugin-netlify": "^2.0.0",
+    "gatsby-plugin-netlify-cms": "^3.0.0",
+    "gatsby-plugin-react-helmet": "^3.0.0",
+    "gatsby-plugin-sass": "^2.0.1",
+    "gatsby-plugin-sharp": "^2.0.5",
+    "gatsby-remark-images": "^2.0.1",
+    "gatsby-source-filesystem": "^2.0.1",
+    "gatsby-transformer-remark": "^2.1.1",
+    "gatsby-transformer-sharp": "^2.1.1",
+    "lodash": "^4.17.5",
+    "lodash-webpack-plugin": "^0.11.4",
+    "netlify-cms": "^2.1.1",
+    "node-sass": "^4.9.2",
+    "parcel-bundler": "^1.9.4",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.4.1",
+    "react-helmet": "^5.2.0",
+    "uuid": "^3.2.1"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "main": "n/a",
   "scripts": {
-    "lint:js": "eslint --ignore-path .gitignore --fix .",
-    "lint:css": "stylelint \"src/**/*.css\"",
-    "lint": "npm-run-all --parallel lint:*",
-    "start": "phenomic start",
-    "build": "phenomic build",
-    "pretest": "npm run lint",
-    "test": "npm run build"
-  },
-  "phenomic": {
-    "CNAME": false,
-    "source": "content",
-    "assets": "assets"
-  },
-  "#babel": "webpack-(development|production) are useful for webpack 2, otherwise use development|production",
-  "babel": {
-    "env": {
-      "test": {
-        "presets": [
-          "babel-preset-env",
-          "babel-preset-stage-2",
-          "babel-preset-react"
-        ]
-      },
-      "development": {
-        "presets": [
-          "babel-preset-env",
-          "babel-preset-stage-2",
-          "babel-preset-react"
-        ],
-        "plugins": [
-          "babel-plugin-transform-react-jsx-source",
-          "babel-plugin-transform-react-jsx-self",
-          "react-hot-loader/babel"
-        ]
-      },
-      "production": {
-        "presets": [
-          "babel-preset-react-optimize",
-          "babel-preset-env",
-          "babel-preset-stage-2",
-          "babel-preset-react"
-        ]
-      },
-      "webpack-development": {
-        "presets": [
-          [
-            "babel-preset-env",
-            {
-              "modules": false
-            }
-          ],
-          "babel-preset-stage-2",
-          "babel-preset-react"
-        ],
-        "plugins": [
-          "babel-plugin-transform-react-jsx-source",
-          "babel-plugin-transform-react-jsx-self",
-          "react-hot-loader/babel"
-        ]
-      },
-      "webpack-production": {
-        "presets": [
-          "babel-preset-react-optimize",
-          [
-            "babel-preset-env",
-            {
-              "modules": false
-            }
-          ],
-          "babel-preset-stage-2",
-          "babel-preset-react"
-        ]
-      }
-    }
-  },
-  "eslintConfig": {
-    "root": true,
-    "extends": "./node_modules/phenomic/lib/eslint-config-recommended/index.js"
-  },
-  "stylelint": {
-    "extends": "./node_modules/phenomic/lib/stylelint-config-recommended/index.js"
+    "start": "npm run develop",
+    "clean": "rimraf .cache public",
+    "build": "npm run clean && gatsby build",
+    "develop": "npm run clean && gatsby develop",
+    "serve": "gatsby serve",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "ajv": "^6.1.1",
-    "babel-cli": "^6.14.0",
-    "babel-core": "^6.14.0",
-    "babel-eslint": "^7.0.0",
-    "babel-loader": "^7.0.0-beta.1",
-    "babel-plugin-transform-react-jsx-self": "^6.11.0",
-    "babel-plugin-transform-react-jsx-source": "^6.9.0",
-    "babel-preset-env": "^1.3.2",
-    "babel-preset-react": "^6.23.0",
-    "babel-preset-react-optimize": "^1.0.1",
-    "babel-preset-stage-2": "^6.22.0",
-    "caniuse-db": "^1.0.30000652",
-    "caniuse-lite": "^1.0.30000697",
-    "classnames": "^2.2.5",
-    "copy-webpack-plugin": "^4.0.1",
-    "css-loader": "^0.28.0",
-    "eslint": "^3.7.1",
-    "eslint-loader": "^1.7.1",
-    "eslint-plugin-react": "^6.4.0",
-    "extract-text-webpack-plugin": "^2.1.0",
-    "file-loader": "^0.10.1",
-    "history": "^2.0.0",
-    "npm-run-all": "^1.7.0",
-    "phenomic": "^0.21.2",
-    "postcss": "^6.0.9",
-    "postcss-browser-reporter": "^0.5.0",
-    "postcss-cssnext": "^3.1.0",
-    "postcss-loader": "^2.1.0",
-    "postcss-reporter": "^5.0.0",
-    "raw-loader": "^0.5.1",
-    "react": "^15.0.0",
-    "react-dom": "^15.0.0",
-    "react-helmet": "^3.0.0",
-    "react-hot-loader": "^3.0.0-beta",
-    "react-redux": "^4.0.0",
-    "react-router": "^2.3.0",
-    "react-svg-inline": "^1.1.0",
-    "react-topbar-progress-indicator": "^1.0.0",
-    "redux": "^3.0.0",
-    "style-loader": "^0.13.0",
-    "stylelint": "^7.2.0",
-    "tailwindcss": "^0.4.1",
-    "warning": "^3.0.0",
-    "webpack": "^2.3.0",
-    "whatwg-fetch": "^0.11.0"
+    "prettier": "^1.7.4",
+    "rimraf": "^2.6.2"
   }
 }
