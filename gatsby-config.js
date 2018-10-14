@@ -1,10 +1,16 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
+    title: 'Chris Goes Remote',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [require('postcss-import')(), require('postcss-preset-env')(), require(`postcss-preset-env`)({ stage: 0 })],
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {

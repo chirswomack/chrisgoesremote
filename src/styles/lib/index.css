@@ -1,0 +1,12 @@
+@import 'fonts/cooper-hewitt';
+@import 'fonts/playfair-display';
+@import 'tachyons-custom/src/tachyons';
+@import 'variables';
+
+.cooper {
+    font-family: 'Cooper Hewitt', sans-serif;
+}
+
+.playfair {
+    font-family: 'Playfair Display', serif;
+}

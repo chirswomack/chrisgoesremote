@@ -1,0 +1,56 @@
+## Created with gatsby-plugin-netlify
+
+/*
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  X-Content-Type-Options: nosniff
+/static/*
+  Cache-Control: public, max-age=31536000, immutable
+/products/
+  Link: </webpack-runtime-1d431023966da1a1f4c0.js>; rel=preload; as=script
+  Link: </0-a803c300217cf7e9caf7.js>; rel=preload; as=script
+/about/
+  Link: </webpack-runtime-1d431023966da1a1f4c0.js>; rel=preload; as=script
+  Link: </0-a803c300217cf7e9caf7.js>; rel=preload; as=script
+/blog/2016-12-17-making-sense-of-the-scaas-new-flavor-wheel/
+  Link: </webpack-runtime-1d431023966da1a1f4c0.js>; rel=preload; as=script
+  Link: </0-a803c300217cf7e9caf7.js>; rel=preload; as=script
+/blog/2017-01-04-a-beginners-guide-to-brewing-with-chemex/
+  Link: </webpack-runtime-1d431023966da1a1f4c0.js>; rel=preload; as=script
+  Link: </0-a803c300217cf7e9caf7.js>; rel=preload; as=script
+/blog/2017-01-04-just-in-small-batch-of-jamaican-blue-mountain-in-store-next-week/
+  Link: </webpack-runtime-1d431023966da1a1f4c0.js>; rel=preload; as=script
+  Link: </0-a803c300217cf7e9caf7.js>; rel=preload; as=script
+/tags/flavor/
+  Link: </webpack-runtime-1d431023966da1a1f4c0.js>; rel=preload; as=script
+  Link: </0-a803c300217cf7e9caf7.js>; rel=preload; as=script
+/tags/tasting/
+  Link: </webpack-runtime-1d431023966da1a1f4c0.js>; rel=preload; as=script
+  Link: </0-a803c300217cf7e9caf7.js>; rel=preload; as=script
+/tags/brewing/
+  Link: </webpack-runtime-1d431023966da1a1f4c0.js>; rel=preload; as=script
+  Link: </0-a803c300217cf7e9caf7.js>; rel=preload; as=script
+/tags/chemex/
+  Link: </webpack-runtime-1d431023966da1a1f4c0.js>; rel=preload; as=script
+  Link: </0-a803c300217cf7e9caf7.js>; rel=preload; as=script
+/tags/jamaica/
+  Link: </webpack-runtime-1d431023966da1a1f4c0.js>; rel=preload; as=script
+  Link: </0-a803c300217cf7e9caf7.js>; rel=preload; as=script
+/tags/green-beans/
+  Link: </webpack-runtime-1d431023966da1a1f4c0.js>; rel=preload; as=script
+  Link: </0-a803c300217cf7e9caf7.js>; rel=preload; as=script
+/404/
+  Link: </webpack-runtime-1d431023966da1a1f4c0.js>; rel=preload; as=script
+  Link: </0-a803c300217cf7e9caf7.js>; rel=preload; as=script
+/
+  Link: </webpack-runtime-1d431023966da1a1f4c0.js>; rel=preload; as=script
+  Link: </0-a803c300217cf7e9caf7.js>; rel=preload; as=script
+/tags/
+  Link: </webpack-runtime-1d431023966da1a1f4c0.js>; rel=preload; as=script
+  Link: </0-a803c300217cf7e9caf7.js>; rel=preload; as=script
+/test/
+  Link: </webpack-runtime-1d431023966da1a1f4c0.js>; rel=preload; as=script
+  Link: </0-a803c300217cf7e9caf7.js>; rel=preload; as=script
+/404.html
+  Link: </webpack-runtime-1d431023966da1a1f4c0.js>; rel=preload; as=script
+  Link: </0-a803c300217cf7e9caf7.js>; rel=preload; as=script

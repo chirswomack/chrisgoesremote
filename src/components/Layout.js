@@ -1,15 +1,15 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import Navbar from './Navbar'
 
-import Navbar from '../components/Navbar'
-import './all.sass'
+import '../styles/lib/index.css'
 
-const TemplateWrapper = ({ children }) => (
+const Layout = ({ children }) => (
   <div>
-    <Helmet title="Home | Gatsby + Netlify CMS" />
+    <Helmet title="Chris Goes Remote" />
     <Navbar />
-    <div>{children}</div>
+    <div className="cooper">{children}</div>
   </div>
 )
 
-export default TemplateWrapper
+export default Layout

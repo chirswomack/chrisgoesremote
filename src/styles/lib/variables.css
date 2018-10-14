@@ -1,0 +1,21 @@
+:root {
+    --secondary: rgb(132, 174, 156);
+    --primary: rgb(14, 91, 80);
+    --background: rgb(255, 255, 255);
+    --darker-background: rgb(240, 242, 241);
+    --text: rgb(0, 0, 0);
+    --text-2: rgba(0, 0, 0, 0.6);
+    --text-3: rgba(0, 0, 0, 0.4);
+    --disabled: rgba(0, 0, 0, 0.2);
+    --background-overlay: rgba(252, 255, 254, 0.7);
+
+    --green: var(--primary);
+    --white-70: var(--background-overlay);
+
+    --font-size-1: 4.209rem;
+    --font-size-2: 3.157rem;
+    --font-size-3: 2.369rem;
+    --font-size-4: 1.777rem;
+    --font-size-5: 1.333rem;
+    --font-size-6: 1;
+}
