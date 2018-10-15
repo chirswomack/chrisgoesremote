@@ -1,3 +1,10 @@
+@custom-media --breakpoint-not-small screen and (min-width: 37.5em);
+@custom-media --breakpoint-medium screen and (min-width: 37.5em) and (max-width: 75em);
+@custom-media --breakpoint-large screen and (min-width: 75em);
+@custom-media --breakpoint-extraSmall screen and (max-width: 360px);
+@custom-media --breakpoint-largerThanTablet screen and (min-width: 56.25em);
+@custom-media --breakpoint-extraLarge screen and (min-width: 112.5em);
+
 :root {
     --secondary: rgb(132, 174, 156);
     --primary: rgb(14, 91, 80);
@@ -9,7 +16,8 @@
     --disabled: rgba(0, 0, 0, 0.2);
     --background-overlay: rgba(252, 255, 254, 0.7);
 
-    --green: var(--primary);
+    --dark-green: var(--primary);
+    --green: var(--secondary);
     --white-70: var(--background-overlay);
 
     --font-size-1: 4.209rem;
@@ -17,5 +25,21 @@
     --font-size-3: 2.369rem;
     --font-size-4: 1.777rem;
     --font-size-5: 1.333rem;
-    --font-size-6: 1;
+    --font-size-6: 1rem;
+    --font-size-7: .75rem;
+}
+
+@media (--breakpoint-extraSmall) {
+    .f5-xs { font-size: var(--font-size-5); }
+    .f6-xs { font-size: var(--font-size-6); }
+}
+
+@media (--breakpoint-largerThanTablet) {
+    .w-two-thirds-ltt { width: calc(100% / 1.5); }
+
+    .w-third-ltt {  width: calc(100% / 3); }
+
+    .fl-ltt { float: left; }
+
+    .ma0-ltt { margin: 0; }
 }

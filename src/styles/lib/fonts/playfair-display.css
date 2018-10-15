@@ -2,10 +2,18 @@
 @font-face {
     font-family: 'Playfair Display';
     font-style: normal;
+    font-weight: 700;
+    src: url('/fonts/playfair/PlayfairDisplay-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    font-style: normal;
     font-weight: 900;
     src: url('/fonts/playfair/PlayfairDisplay-Black.ttf');
 }
 
+/* Italic */
 @font-face {
     font-family: 'Playfair Display';
     font-style: italic;
