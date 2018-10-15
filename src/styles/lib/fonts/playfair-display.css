@@ -20,3 +20,10 @@
     font-weight: 700;
     src: url('/fonts/playfair/PlayfairDisplay-BoldItalic.ttf');
 }
+
+@font-face {
+    font-family: 'Playfair Display';
+    font-style: italic;
+    font-weight: 900;
+    src: url('/fonts/playfair/PlayfairDisplay-BlackItalic.ttf');
+}
