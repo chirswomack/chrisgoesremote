@@ -1,3 +1,22 @@
 .teaser-image {
     object-fit: cover;
+    transition: transform .5s;
+}
+
+figure:hover .teaser-image,
+figure:focus .teaser-image {
+    transform: scale(1.05);
+}
+
+.teaser-title--featured:hover {
+    font-style: italic;
+}
+
+.teaser-title-hover {
+    width: 0%;
+    transition: width .5s;
+}
+
+.teaser-title:hover .teaser-title-hover {
+    width: 100%
 }

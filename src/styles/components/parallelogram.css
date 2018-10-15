@@ -2,6 +2,10 @@
     transform: skew(-25deg);
 }
 
+.tag-link:hover .parallelogram {
+    transform: scale(1.05) skew(-25deg);
+}
+
 .parallelogram > * {
     transform: skew(25deg);
 }
