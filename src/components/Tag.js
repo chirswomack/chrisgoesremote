@@ -1,5 +1,7 @@
 import React from 'react'
 
+import '../styles/components/parallelogram.css'
+
 const Tag = ({tag, index}) => {
     const even = index % 2 === 0;
     const bg = even ? 'bg-dark-green' : 'bg-green'
