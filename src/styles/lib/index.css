@@ -10,3 +10,13 @@
 .playfair {
     font-family: 'Playfair Display', serif;
 }
+
+.navbarBrand {
+    height: 2rem;
+}
+
+@media (--breakpoint-not-small) {
+    .navbarBrand {
+        height: 3rem;
+    }
+}

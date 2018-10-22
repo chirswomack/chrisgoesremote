@@ -7,7 +7,7 @@ const Navbar = () => (
     <div className="dib">
       <Link to="/">
         <figure className="ma0">
-          <img src={logo} alt="Chris Goes Remote" style={{height: '3rem'}}/>
+          <img src={logo} alt="Chris Goes Remote" className="navbarBrand" />
         </figure>
       </Link>
     </div>
