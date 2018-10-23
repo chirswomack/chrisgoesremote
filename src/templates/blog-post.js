@@ -16,7 +16,8 @@ export const BlogPostTemplate = ({
     title,
     helmet,
     image,
-    date
+    date,
+    readingTime
 }) => {
     const PostContent = contentComponent || Content
 
@@ -33,11 +34,11 @@ export const BlogPostTemplate = ({
                     <p className="f6-ns f7">
                         {date}
                         <span className="mh2 f7 v-mid">&#9670;</span>
-                        <span className="j-readTime">5 minute read</span>
+                        {readingTime} min read
                     </p>
                     <div className="mt4 flex">
                         <div className="br-100 h3 w3 mr3 cover" style={{background: `url(${image})`}} />
-                        <p className="f5-ns f6 mt0 pt1 lh-copy">Written by <br/> Chris Womack</p>
+                        <p className="f6-ns f7 mt0 pt1 lh-copy">Written by <br/> Chris Womack</p>
                     </div>
                 </div>
             </div>
@@ -69,7 +70,8 @@ BlogPostTemplate.propTypes = {
     title: PropTypes.string,
     helmet: PropTypes.instanceOf(Helmet),
     image: PropTypes.string,
-    date: PropTypes.string
+    date: PropTypes.string,
+    readingTime: PropTypes.string
 }
 
 const BlogPost = ({ data }) => {
@@ -86,6 +88,7 @@ const BlogPost = ({ data }) => {
                 title={post.frontmatter.title}
                 image={post.frontmatter.image}
                 date={post.frontmatter.date}
+                readingTime={post.timeToRead}
             />
         </Layout>
     )
@@ -111,6 +114,7 @@ export const pageQuery = graphql`
         tags
         image
       }
+      timeToRead
     }
   }
 `

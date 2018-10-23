@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 export const HTMLContent = ({ content, className }) => (
-  <div className={`f5-ns f6 lh-copy center post`} dangerouslySetInnerHTML={{ __html: content }} />
+  <div className={`f5-ns fw4 lh-copy center post`} dangerouslySetInnerHTML={{ __html: content }} />
 )
 
 const Content = ({ content, className }) => (

@@ -12,7 +12,9 @@ const PostPreview = post => (
                 <p className="ttu white i fw1 f6 f4-l ma0 lh-solid">Featured post</p>
             </div>
             <div>
-                <p className="playfair white f5-xs f4 f3-m f1-l fw9 mb0 mt3 teaser-title--featured">{post.frontmatter.title}</p>
+                <p className="playfair white f5-xs f4 f3-m f1-l fw9 mb0 mt3 teaser-title--featured">
+                    <span>{post.frontmatter.title}</span>
+                </p>
             </div>
         </div>
     </Link>

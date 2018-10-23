@@ -8,8 +8,20 @@ figure:focus .teaser-image {
     transform: scale(1.05);
 }
 
-.teaser-title--featured:hover {
-    font-style: italic;
+.teaser-title--featured {
+    position: relative;
+}
+
+.teaser-title--featured span {
+    width: calc(100%);
+    background-image: linear-gradient(transparent calc(100% - 8px), var(--green) 8px);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    transition: background-size 0.7s ease;
+}
+
+.teaser-title--featured:hover span {
+    background-size: 100% 100%;
 }
 
 .teaser-title-hover {
@@ -18,5 +30,5 @@ figure:focus .teaser-image {
 }
 
 .teaser-title:hover .teaser-title-hover {
-    width: 100%
+    width: 100%;
 }
